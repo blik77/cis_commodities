@@ -1,0 +1,17 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Total requests count</th>
+        <th>Avg request processing time</th>
+    </tr>
+    </thead>
+    <tbody  data-bind="foreach: statistics">
+    <tr>
+        <td data-bind="text: $data.name"></td>
+        <td data-bind="text: $data.requestsCount"></td>
+        <td data-bind="text: $data.getAvgTime"></td>
+    </tr>
+    </tbody>
+</table>
+

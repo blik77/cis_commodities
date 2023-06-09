@@ -1,0 +1,47 @@
+<h1 data-bind="text: title"></h1>
+<h2 data-bind="text: author"></h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>cachedDataEntries</td>
+        <td data-bind="text: $root.appinfo().cachedDataEntries"></td>
+    </tr>
+    <tr>
+        <td>cachedDataHitCount</td>
+        <td data-bind="text: $root.appinfo().cachedDataHitCount"></td>
+    </tr>
+    <tr>
+        <td>cachedDataHitRate</td>
+        <td data-bind="text: $root.appinfo().cachedDataHitRate"></td>
+    </tr>
+    <tr>
+        <td>cachedMetadataEntries</td>
+        <td data-bind="text: $root.appinfo().cachedMetadataEntries"></td>
+    </tr>
+    <tr>
+        <td>cachedMetadataHitCount</td>
+        <td data-bind="text: $root.appinfo().cachedMetadataHitCount"></td>
+    </tr>
+    <tr>
+        <td>cachedMetadataHitRate</td>
+        <td data-bind="text: $root.appinfo().cachedMetadataHitRate"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<br>
+<button type="button" class="btn btn-default btn-lg" onclick="(function(e, obj){$.getJSON('/kortes/service/info/reset/', function (data) {})})(event, this)">
+    Clear Cache
+</button>
+<button type="button" class="btn btn-default btn-lg" onclick="(function(e, obj){$.getJSON('/kortes/service/info/usecache/', function (data) {})})(event, this)" data-bind="text: $root.appinfo().isCacheUsing">
+    Clear Cache
+</button>
+

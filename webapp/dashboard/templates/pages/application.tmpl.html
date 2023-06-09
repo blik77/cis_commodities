@@ -1,0 +1,38 @@
+<h1 data-bind="text: title"></h1>
+<h2 data-bind="text: author"></h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Data Connection String</td>
+        <td data-bind="text: $root.appinfo().dataConnectionString"></td>
+    </tr>
+    <tr>
+        <td>Metadata Connection String</td>
+        <td data-bind="text: $root.appinfo().metadataConnectionString"></td>
+    </tr>
+    <tr>
+        <td>Data Cache Size (Count)</td>
+        <td data-bind="text: $root.appinfo().appmaxcachesize"></td>
+    </tr>
+    <tr>
+        <td>Cache Expiration Timeout in Minutes</td>
+        <td data-bind="text: $root.appinfo().appcahceexpiration"></td>
+    </tr>
+    <tr>
+        <td>Cache Page Size</td>
+        <td data-bind="text: $root.appinfo().apppagesize"></td>
+    </tr>
+    <tr>
+        <td>Nearest Pages to Load</td>
+        <td data-bind="text: $root.appinfo().apppagepreload"></td>
+    </tr>
+    </tbody>
+</table>
+
